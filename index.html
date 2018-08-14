@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" href="main/style.css"> -->
+    <link rel="stylesheet" href="estilo.css">
+    <title>Index - FoodMap</title>
+</head>
+
+<body>
+    <!-- SPLASH -->
+    <div id="content-splash" class="hiden">
+        <img src="image/logo.png">
+    </div>
+    <!-- VISTA DE OPCIONES SOBRE UBICACIÓN ACTUAL -->
+    <section id="content-start" class="hiden">
+        <!-- class="content-start" -->
+        <header>
+            <img class="logo" src="image/logo.png">
+        </header>
+        <main class="start-main">
+            <div class="content-start-main">
+                <p> ¿Dónde te encuentras ahora?</p>
+                <input type="text" id="zone-search" placeholder="Ingrese ciudad">
+                <p>- o -</p>
+                <select id="select-city">
+                    <option value="Lima">Lima</option>
+                    <option value="Callao">Callao</option>
+                </select>
+                <input type="button" id="btn-search-restaurant" value="Buscar">
+            </div>
+        </main>
+        <footer>
+            <img src="image/logo.png">
+        </footer>
+    </section>
+    <!-- VISTA PRINCIPAL -->
+    <section id="content-main" class="">
+        <!-- class="section-main" -->
+        <header>
+            <img class="logo" src="image/logo.png">
+        </header>
+        <main class="main">
+            <div class="content-filter">
+                <p>Filtrar por:</p>
+                <input type="text" id="filter-name-restaurant" placeholder="Ingrese restaurante...">
+                <p>Categoría:</p>
+                <ul>
+                    <li>
+                        <input type="radio" id="vegetarian-food" name="food" value="Comida Vegana">
+                        <label for="vegetarian-food">Comida Vegana</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="italian-food" name="food" value="Comida Italiana">
+                        <label for="italian-food">Comida Italiana</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="japanesse-food" name="food" value="Comida Japonesa">
+                        <label for="japanesse-food">Comida Japonesa</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="peruvian-food" name="food" value="Comida Peruana">
+                        <label for="peruvian-food">Comida Peruana</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="fast-food" name="food" value="Comida rápida">
+                        <label for="fast-food">Comida rápida</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="other-food" name="food" value="Otros">
+                        <label for="other-food">Otros</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="">
+                <!-- class="content-filtered" -->
+                <p>Restaurantes encontrados:</p>
+                <div id="list-filtered" class="list-filtered">
+                    <div class="filtered">
+                        <input type="button" id="restaurante-filtered" class="restaurante-filtered">
+                        <p>Nombre Restaurante</p>
+                    </div>
+                    <div class="filtered">
+                        <input type="button" id="restaurante-filtered" class="restaurante-filtered">
+                        <p>Nombre Restaurante</p>
+                    </div>
+                    <div class="filtered">
+                        <input type="button" id="restaurante-filtered" class="restaurante-filtered">
+                        <p>Nombre Restaurante</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+    <script src="main/data.js"></script>
+    <script src="main/index.js"></script>
+</body>
+
+</html>

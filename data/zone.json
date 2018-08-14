@@ -1,0 +1,29 @@
+{
+    "01": {
+        "name": "Miraflores"
+    },
+    "02": {
+        "name": "San Isidro"
+    },
+    "03": {
+        "name": "San Borja"
+    },
+    "04": {
+        "name": "La Molina"
+    },
+    "05": {
+        "name": "Surco"
+    },
+    "06": {
+        "name": "Barranco"
+    },
+    "07": {
+        "name": "Magdalena"
+    },
+    "08": {
+        "name": "Lince"
+    },
+    "09": {
+        "name": "Pueblo Libre"
+    }
+}

@@ -1,0 +1,124 @@
+html{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    /* background-color: #27CEA1; */
+    text-align: center; 
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    font-family: Georgia;
+}
+
+#splash{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.hiden{
+    display: none;
+}
+
+.content-start{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+
+header{
+    height: 30%;
+    background-color: #27CEA1;
+}
+
+.start-main{
+    height: 40%;
+    background-color: red;
+}
+
+.content-start-main{
+    padding: 50px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+
+p{
+    margin: 0px;
+    padding: 10px;
+}
+
+footer{
+    height: 30%;
+    background-color: blueviolet;
+}
+
+.logo{
+    padding: 25px;
+}
+
+.content-main{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.main{
+    height: 70%;
+    display: flex;
+}
+
+.content-filter{
+    width: 600px;
+    background-color: aliceblue;
+}
+
+.content-filtered{
+    width: 800px;
+    background-color: burlywood;
+    padding: 10px;
+}
+
+input[type="text"]{
+    border-radius: 5px;;
+    height: 25px;
+    width: 250px;
+    border-width: 1px
+}
+
+input[type="radio"]{
+    height: 25px;
+    width: 30px;  
+}
+
+.list-filtered{
+   display: flex;
+}
+
+.filtered{
+    margin: 10px;
+    height: 200px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.restaurante-filtered{
+    height: 180px;
+    width: 200px;
+}
+
+ul li{
+    list-style-type: none;
+    text-align: left;
+    padding: 10px;
+    
+}
+
