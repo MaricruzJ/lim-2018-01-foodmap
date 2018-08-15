@@ -2,7 +2,7 @@
     "res-01": {
         "name": "Rigoletto",
         "description": "En pleno centro del distrito de Miraflores abre sus puertas Rigoletto, un restaurante italiano que en sus platos busca rescatar la verdadera esencia de la rica tradición culinaria italiana",
-        "food-type": "Comida Italiana",
+        "foodType": "Comida Italiana",
         "ubication": "Miraflores",
         "photo": "https://restorando-res.cloudinary.com/image/upload/b_rgb:000000,c_pad,f_auto,g_center,h_720,w_1280/v1/restaurant_photos/j//4429/123830/restaurante_rigoletto--2_miraflores_platos_004.jpg",
         "direction": "Calle Colón 161, Miraflores 15074",
@@ -26,7 +26,7 @@
     "res-03": {
         "name": "Fiesta Restaurant Gourmet",
         "description": "Fiesta Chiclayo Gourmet es un ícono de la gastronomía peruana. Su historia se remonta a La Sala Bolívar, restaurante fundado por Moisés Solís Albujar, un visionario de los negocios de buena mesa. ",
-        "food-type": "Comida Peruana",
+        "foodType": "Comida Peruana",
         "ubication": "Miraflores",
         "photo": "https://restorando-res.cloudinary.com/image/upload/b_rgb:000000,c_pad,f_auto,g_center,h_720,w_1280/v1/restaurant_photos/h//6273/46271/restaurante_fiesta-restaurant-gourmet_miraflores_costillar_de_cabrito.jpg",
         "direction": "Av. Reducto 1278 - Miraflores, Lima LIMA 18",
@@ -38,7 +38,7 @@
     "res-04": {
         "name": "Osaka",
         "description": "Ubicado en el céntrico distrito limeño, lo primero que llama la atención al entrar es su base de madera, adobe, piedra y agua, otorgan a su nuevo local en Lima una atmósfera cómoda y encantadora y que de noche es espectacular. Una barra de sushi, una barra de tragos, un espacioso ambiente central y dos privados.",
-        "food-type": "Comida Japonesa",
+        "foodType": "Comida Japonesa",
         "ubication": "San Isidro",
         "photo": "https://restorando-res.cloudinary.com/image/upload/b_rgb:000000,c_pad,f_auto,g_center,h_720,w_1280/v1/restaurant_photos/k//4456/109581/restaurante_osaka-san-isidro_san-isidro_omakase_1.jpg",
         "direction": "Avenida Felipe Pardo y Aliaga 660, San Isidro 15073",
@@ -50,7 +50,7 @@
     "res-05": {
         "name": "Embarcadero 41",
         "description": "Se trata de una serie de locales cuyo chef corporativo es Carlo Huerta, quien ha demostrado una gran capacidad para destacar dentro de la cocina peruana de fusión.",
-        "food-type": "Comida Peruana",
+        "foodType": "Comida Peruana",
         "ubication": "San Isidro",
         "photo": "https://restorando-res.cloudinary.com/image/upload/b_rgb:000000,c_pad,f_auto,g_center,h_720,w_1280/v1/restaurant_photos/g//10120/89202/restaurante_embarcadero-41-francisco-masias_san-isidro_ceviche_de_corvina.jpg",
         "direction": "Calle Francisco Masias 590, San Isidro 15046",
@@ -62,7 +62,7 @@
     "res-06": {
         "name": "La Locanda",
         "description": "Ubicado en el distrito de San Isidro, este restaurante es una de las propuestas gastronómicas del Swissotel Lima. Aquí, los huéspedes y los inquietos que deseen conocerlo.",
-        "food-type": "Comida Italiana",
+        "foodType": "Comida Italiana",
         "ubication": "San Isidro",
         "photo": "https://restorando-res.cloudinary.com/image/upload/b_rgb:000000,c_pad,f_auto,g_center,h_720,w_1280/v1/restaurant_photos/b//4317/93345/restaurante_la-locanda-swissotel_san-isidro_calamar_y_pulpo.jpg",
         "direction": "Av. Santo Toribio 173-Vía Central 150",
