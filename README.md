@@ -6,29 +6,29 @@ Por ello, esta web-app le muestra los restaurantes más cercanos donde usted se 
 
 En resumen, usted podrá:
 
-  - Filtrar por zona.
-  - Buscar de restaurante por nombre.
-  - Ver detalles sobre un restaurante específico.
+  - Filtrar por zona.<br>
+  - Buscar de restaurante por nombre.<br>
+  - Ver detalles sobre un restaurante específico.<br>
 
 ## Herramientas Utilizadas
 
-> Balsamiq, esto para el diseño en baja fidelidad.
-> HTML, para la estructura de la web-app
-> CSS, para darle estilos a la web-app
-> Vanilla JavaScript, para darle funcionalildad al proyecto.
+> Balsamiq, esto para el diseño en baja fidelidad.<br>
+> HTML, para la estructura de la web-app<br>
+> CSS, para darle estilos a la web-app<br>
+> Vanilla JavaScript, para darle funcionalildad al proyecto.<br>
 
-Decidí no usar frameworks porque considero que debo conocer bien HTML, CSS y JavaScript, me encuentro en proceso de aprendizaje continuo.
+Decidí no usar frameworks porque considero que debo conocer bien HTML, CSS y JavaScript, me encuentro en proceso de aprendizaje continuo.<br>
 
 ## Prototipo de baja fidelidad en Balsamiq
 
 ### Mobil
 
-![Mobil](image/prototipo-mobil.png)
+![Mobil](image/prototipo-movil.png)
 
 ### Web
 
-![Web-partA](pictures/prototipo-web1.png)<br>
-![Web-partB](pictures/prototipo-web2.png)
+![Web-partA](image/prototipo-web1.png)<br>
+![Web-partB](image/prototipo-web2.png)
 
 ## FoodMap
 
