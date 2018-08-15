@@ -5,7 +5,6 @@ getJson = (url, callback) => {
             return response.json();
         })
         .then((myJson) => {
-            console.log(myJson);
             callback(myJson);
         });
 }

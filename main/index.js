@@ -37,18 +37,22 @@ filterNameRestaurant.addEventListener('keyup', () => {
 })
 
 
-getJson('../data/zone.json', (zone) => {
-    console.log(zone);
-    let x = Object.keys(zone);
-        console.log(x);
-        for (const x in zone) {
-            if (zone.hasOwnProperty(x)) {
-                const element = zone[x];
-                console.log(element);
-            }
+getJson('../data/zone.json', (jsonZone) => {
+
+    for (const keyZone in jsonZone) {
+        if (jsonZone.hasOwnProperty(keyZone)) {
+            const objectZone = jsonZone[keyZone];
+            console.log(objectZone.name);
         }
+    }
 })
 
-getJson('../data/data.json', (restaurant) => {
-    console.log(restaurant);
+getJson('../data/data.json', (jsonRestaurant) => {
+    
+    for (const keyRestaurant in jsonRestaurant) {
+        if (jsonRestaurant.hasOwnProperty(keyRestaurant)) {
+            const objectZone = jsonRestaurant[keyRestaurant];
+            console.log(objectZone);
+        }
+    }
 })
