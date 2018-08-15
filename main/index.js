@@ -36,52 +36,19 @@ filterNameRestaurant.addEventListener('keyup', () => {
     console.log(filterNameRestaurant.value);
 })
 
-/* fetch('../data/zone.json')
-    .then((response) => {
-        return response.json();
-    })
-    .then((myJson) => {
-        console.log(myJson);
 
-        let x = Object.keys(myJson);
+getJson('../data/zone.json', (zone) => {
+    console.log(zone);
+    let x = Object.keys(zone);
         console.log(x);
-        for (const x in myJson) {
-            if (myJson.hasOwnProperty(x)) {
-                const element = myJson[x];
+        for (const x in zone) {
+            if (zone.hasOwnProperty(x)) {
+                const element = zone[x];
                 console.log(element);
             }
         }
-    }); */
-
-fetch('../data/data.json')
-    .then((response) => {
-        return response.json(); // esto solo es una respuesta HTTP, no el JSON real
-    })
-    .then((myJson) => {
-        console.log(myJson);
-
-        let x = Object.keys(myJson);
-        console.log(x);
-        for (const x in myJson) {
-            if (myJson.hasOwnProperty(x)) {
-                const element = myJson[x];
-                console.log(element);
-            }
-        }
-    });
-
-getJson('../data/data.json', (zone) => {
-console.log(zone);
 })
 
-getJson = (url, callback) => {
-
-    fetch(url)
-    .then((response) => {
-        return response.json();
-    })
-    .then((myJson) => {
-        console.log(myJson);
-        callback(myJson);
-    });
-}
+getJson('../data/data.json', (restaurant) => {
+    console.log(restaurant);
+})
