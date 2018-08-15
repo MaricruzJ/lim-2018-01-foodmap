@@ -17,5 +17,22 @@ getJson = (url, callback) => {
         });
 }
 
+showRestaurantInZone = (objectRestaurant) => {
+    console.log(objectRestaurant);
 
+    let cardRestaurant = document.createElement('div');
+    cardRestaurant.setAttribute('class', 'filtered');
+
+    let inputRestaurant = document.createElement('button');
+    inputRestaurant.setAttribute('class', 'restaurante-filtered');
+
+    let nameRestaurant = document.createElement('p');
+    let textName = document.createTextNode(objectRestaurant.name);
+
+    textName.appendChild(nameRestaurant);
+    nameRestaurant.appendChild(cardRestaurant);
+    inputRestaurant.appendChild(cardRestaurant);
+
+    cardRestaurant.appendChild(listFiltered);
+}
 

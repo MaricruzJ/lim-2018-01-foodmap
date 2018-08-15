@@ -30,36 +30,41 @@ getJson('../data/zone.json', (jsonZone) => {
 
             optionZone.appendChild(optionZoneText);
             selectCity.appendChild(optionZone);
-
         }
     }
 
     zone = selectCity.value;
-    selectCity.addEventListener('change', () => {        
+    console.log(zone);
+    selectCity.addEventListener('change', () => {
         zone = selectCity.value;
+        console.log(zone);
     });
-
-    btnSearchRestaurant.addEventListener('click', () => {
-        console.log('click en botón de busqueda de restaurant');
-        contentSplash.classList.add('hiden');
-        contentStart.classList.add('hiden');
-        contentMain.classList.remove('hiden');
-    });
-
 
     getJson('../data/data.json', (jsonRestaurant) => {
         for (const keyRestaurant in jsonRestaurant) {
             if (jsonRestaurant.hasOwnProperty(keyRestaurant)) {
                 const objectRestaurant = jsonRestaurant[keyRestaurant];
-                //console.log(objectRestaurant.name);
+                console.log(objectRestaurant.name);
+
+                if (zone)
+
+
             }
         }
-
-        filterNameRestaurant.addEventListener('keyup', () => {
-            console.log(filterNameRestaurant.value);
-        });
-
     })
-
 })
 
+
+
+
+btnSearchRestaurant.addEventListener('click', () => {
+    console.log('click en botón de busqueda de restaurant');
+    contentSplash.classList.add('hiden');
+    contentStart.classList.add('hiden');
+    contentMain.classList.remove('hiden');
+});
+
+
+filterNameRestaurant.addEventListener('keyup', () => {
+    console.log(filterNameRestaurant.value);
+});
