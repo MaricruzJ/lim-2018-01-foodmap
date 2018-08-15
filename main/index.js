@@ -48,11 +48,10 @@ getJson('../data/zone.json', (jsonZone) => {
 })
 
 getJson('../data/data.json', (jsonRestaurant) => {
-    
     for (const keyRestaurant in jsonRestaurant) {
         if (jsonRestaurant.hasOwnProperty(keyRestaurant)) {
-            const objectZone = jsonRestaurant[keyRestaurant];
-            console.log(objectZone);
+            const objectRestaurant = jsonRestaurant[keyRestaurant];
+            console.log(objectRestaurant.name);
         }
     }
 })
