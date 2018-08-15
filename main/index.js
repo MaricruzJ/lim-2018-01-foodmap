@@ -16,6 +16,9 @@ const otherFood = document.getElementById('other-food');
 
 const listFiltered = document.getElementById('list-filtered');
 
+
+
+
 zoneSearch.addEventListener('keyup', () => {
     console.log(zoneSearch.value);
 });
@@ -26,6 +29,9 @@ selectCity.addEventListener('change', () => {
 
 btnSearchRestaurant.addEventListener('click', () => {
     console.log('click en botón de busqueda de restaurant');
+    contentSplash.classList.add('hiden');
+    contentStart.classList.add('hiden');
+    contentMain.classList.remove('hiden');  
 });
 
 filterNameRestaurant.addEventListener('keyup', () => {

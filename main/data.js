@@ -8,3 +8,12 @@ getJson = (url, callback) => {
             callback(myJson);
         });
 }
+
+window.onload = () => {
+    console.log('hola!');
+    setTimeout(() => {
+        contentSplash.classList.add('hiden');
+        contentStart.classList.remove('hiden');
+    }, 2000)
+};
+

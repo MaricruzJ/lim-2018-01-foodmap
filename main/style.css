@@ -4,7 +4,7 @@ html{
 }
 
 body{
-    /* background-color: #27CEA1; */
+    background-color: #27CEA1;
     text-align: center; 
     margin: 0px;
     height: 100%;
@@ -12,7 +12,7 @@ body{
     font-family: Georgia;
 }
 
-#splash{
+#content-splash{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -24,7 +24,7 @@ body{
     display: none;
 }
 
-.content-start{
+#content-start{
     height: 100%;
     width: 100%;
     position: absolute;
@@ -38,11 +38,10 @@ header{
 
 .start-main{
     height: 40%;
-    background-color: red;
+    background-color:#DEB887;
 }
 
 .content-start-main{
-    padding: 50px;
     top: 50%;
     left: 50%;
     position: absolute;
@@ -56,14 +55,14 @@ p{
 
 footer{
     height: 30%;
-    background-color: blueviolet;
+    background-color: #27CEA1;
 }
 
 .logo{
     padding: 25px;
 }
 
-.content-main{
+#content-main{
     height: 100%;
     width: 100%;
     position: absolute;
@@ -72,6 +71,7 @@ footer{
 .main{
     height: 70%;
     display: flex;
+    width: 100%;
 }
 
 .content-filter{
@@ -80,21 +80,35 @@ footer{
 }
 
 .content-filtered{
+    position: relative;
     width: 800px;
-    background-color: burlywood;
+    background-color:#DEB887;
     padding: 10px;
 }
 
 input[type="text"]{
-    border-radius: 5px;;
+    border-radius: 5px;
     height: 25px;
-    width: 250px;
+    width: 350px;
     border-width: 1px
 }
 
 input[type="radio"]{
     height: 25px;
     width: 30px;  
+}
+
+#btn-search-restaurant{
+    height: 25px;
+    width: 100px;  
+    border-radius: 5px;
+}
+
+select{
+    border-radius: 5px;
+    height: 25px;
+    width: 250px;
+    border-width: 1px
 }
 
 .list-filtered{
@@ -119,6 +133,60 @@ ul li{
     list-style-type: none;
     text-align: left;
     padding: 10px;
-    
 }
 
+@media only screen and (max-width: 360px) {
+    input[type="text"] {
+        border-radius: 5px;
+        height: 25px;
+        width: 250px;
+        border-width: 1px;
+    }
+
+    #btn-search-restaurant {
+        margin: 30px;
+        height: 25px;
+        width: 100px;
+        border-radius: 5px;
+    }
+
+    .main {
+        height: 70%;
+        width: 100%;
+        display: block;
+        position: absolute;
+       
+    }
+
+    header{
+        width: 100%;
+    }
+
+    .content-filter {
+        width: 100%;
+        background-color: aliceblue;
+    }
+
+    .content-filtered {
+        padding: 0px;
+        width: 100%;
+        background-color: #DEB887;
+    }
+
+    .list-filtered{
+        display: block;
+     }
+
+     .filtered {
+        margin: 0px;
+        height: auto;
+        width: 100%;
+    }
+
+     ul li{
+        list-style-type: none;
+        text-align: left;
+        padding: 10px;
+        margin: 0px;
+    }
+}
