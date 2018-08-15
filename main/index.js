@@ -2,7 +2,6 @@ const contentSplash = document.getElementById('content-splash');
 const contentStart = document.getElementById('content-start');
 const contentMain = document.getElementById('content-main');
 
-const zoneSearch = document.getElementById('zone-search');
 const selectCity = document.getElementById('select-city');
 const btnSearchRestaurant = document.getElementById('btn-search-restaurant');
 
@@ -17,47 +16,52 @@ const otherFood = document.getElementById('other-food');
 const listFiltered = document.getElementById('list-filtered');
 
 
-
-
-zoneSearch.addEventListener('keyup', () => {
-    console.log(zoneSearch.value);
-});
-
-selectCity.addEventListener('change', () => {
-    console.log(selectCity.value);
-});
-
-btnSearchRestaurant.addEventListener('click', () => {
-    console.log('click en botón de busqueda de restaurant');
-    contentSplash.classList.add('hiden');
-    contentStart.classList.add('hiden');
-    contentMain.classList.remove('hiden');  
-});
-
-filterNameRestaurant.addEventListener('keyup', () => {
-    console.log(filterNameRestaurant.value);
-});
-
-filterNameRestaurant.addEventListener('keyup', () => {
-    console.log(filterNameRestaurant.value);
-})
-
+let zone = {};
 
 getJson('../data/zone.json', (jsonZone) => {
 
     for (const keyZone in jsonZone) {
         if (jsonZone.hasOwnProperty(keyZone)) {
             const objectZone = jsonZone[keyZone];
-            console.log(objectZone.name);
+
+            let optionZone = document.createElement('option');
+            optionZone.setAttribute('value', objectZone.name);
+            let optionZoneText = document.createTextNode(objectZone.name);
+
+            optionZone.appendChild(optionZoneText);
+            selectCity.appendChild(optionZone);
+
         }
     }
+
+    zone.key = selectCity.value;
+    console.log(zone.key);
+    selectCity.addEventListener('change', () => {
+        console.log(selectCity.value);
+        zone.key = selectCity.value;
+    });
+
+    btnSearchRestaurant.addEventListener('click', () => {
+        console.log('click en botón de busqueda de restaurant');
+        contentSplash.classList.add('hiden');
+        contentStart.classList.add('hiden');
+        contentMain.classList.remove('hiden');
+    });
+
+
+    getJson('../data/data.json', (jsonRestaurant) => {
+        for (const keyRestaurant in jsonRestaurant) {
+            if (jsonRestaurant.hasOwnProperty(keyRestaurant)) {
+                const objectRestaurant = jsonRestaurant[keyRestaurant];
+                //console.log(objectRestaurant.name);
+            }
+        }
+
+        filterNameRestaurant.addEventListener('keyup', () => {
+            console.log(filterNameRestaurant.value);
+        });
+
+    })
+
 })
 
-getJson('../data/data.json', (jsonRestaurant) => {
-    for (const keyRestaurant in jsonRestaurant) {
-        if (jsonRestaurant.hasOwnProperty(keyRestaurant)) {
-            const objectRestaurant = jsonRestaurant[keyRestaurant];
-            console.log(objectRestaurant.name);
-        }
-    }
-})

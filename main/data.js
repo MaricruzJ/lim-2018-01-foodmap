@@ -1,3 +1,11 @@
+window.onload = () => {
+    console.log('hola!');
+    setTimeout(() => {
+        contentSplash.classList.add('hiden');
+        contentStart.classList.remove('hiden');
+    }, 1000)
+};
+
 getJson = (url, callback) => {
 
     fetch(url)
@@ -9,11 +17,5 @@ getJson = (url, callback) => {
         });
 }
 
-window.onload = () => {
-    console.log('hola!');
-    setTimeout(() => {
-        contentSplash.classList.add('hiden');
-        contentStart.classList.remove('hiden');
-    }, 2000)
-};
+
 
