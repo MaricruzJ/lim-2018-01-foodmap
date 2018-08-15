@@ -70,21 +70,15 @@ fetch('../data/data.json')
         }
     });
 
-/* // llamo a la función y  dos argumentos, el segundo es lo que obtendré 
-getUserForId(user.uid, (userDatabase) => {
-
-    userFromDatabase = userDatabase;
-    userNameProfile.innerHTML = userDatabase.fullName;
-    userNamePost.innerHTML = userDatabase.fullName;
-    photoUserProfile.style.backgroundImage = "url('" + userDatabase.profilePicture + "')";
-    photoUserPost.style.backgroundImage = "url('" + userDatabase.profilePicture + "')";
-
-});
-
-// creo la función que va a recibir parámetros
 getUserForId = (uid, callback) => {
     const userRef = firebase.database().ref('users/' + uid);
     userRef.once('value', (snap) => {
         callback(snap.val());
     })
-} */
+}
+
+getUserForId(user.uid, (userDatabase) => {
+
+    userNameProfile.innerHTML = userDatabase.fullName;
+
+});
