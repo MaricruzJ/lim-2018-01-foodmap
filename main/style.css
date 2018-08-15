@@ -69,7 +69,7 @@ footer{
 }
 
 .main{
-    height: 70%;
+    height: auto;
     display: flex;
     width: 100%;
 }
@@ -115,7 +115,6 @@ select{
 .filtered{
     margin: 10px;
     height: 200px;
-    width: 200px;
     padding: 10px;
     border-radius: 5px;
     background-color: white;

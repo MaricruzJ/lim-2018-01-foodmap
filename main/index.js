@@ -44,6 +44,13 @@ getJson('../data/zone.json', (jsonZone) => {
                 if (jsonRestaurant.hasOwnProperty(keyRestaurant)) {
                     const objectRestaurant = jsonRestaurant[keyRestaurant];
                     showRestaurantInZone(objectRestaurant);
+
+                    filterNameRestaurant.addEventListener('keyup', () => {
+                        
+                        let filterResult = filterRestaurant(objectRestaurant, filterNameRestaurant.value);
+                        console.log(filterResult);
+                    });
+                    
                 }
             }
         })
@@ -54,6 +61,3 @@ selectCity.addEventListener('change', () => {
     console.log(selectCity.value);
 });
 
-filterNameRestaurant.addEventListener('keyup', () => {
-    console.log(filterNameRestaurant.value);
-});

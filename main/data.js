@@ -3,7 +3,7 @@ window.onload = () => {
     setTimeout(() => {
         contentSplash.classList.add('hiden');
         contentStart.classList.remove('hiden');
-    }, 1000)
+    }, 2000)
 };
 
 getJson = (url, callback) => {
@@ -18,7 +18,6 @@ getJson = (url, callback) => {
 }
 
 showRestaurantInZone = (objectRestaurant) => {
-    console.log(objectRestaurant);
 
     let cardRestaurant = document.createElement('div');
     cardRestaurant.setAttribute('class', 'filtered');
@@ -36,4 +35,11 @@ showRestaurantInZone = (objectRestaurant) => {
     cardRestaurant.appendChild(nameRestaurant);
 
     listFiltered.appendChild(cardRestaurant);
+}
+
+filterRestaurant = (objectRestaurant, filterNameRestaurant) => {
+    console.log(objectRestaurant.name);
+    let result = objectRestaurant.filter(restaurant => (restaurant.name.includes(filterNameRestaurant.toUpperCase())));
+    console.log(result);
+    return result;
 }

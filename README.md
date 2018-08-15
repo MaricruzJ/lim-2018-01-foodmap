@@ -1,27 +1,36 @@
-#  F O O D M A P
+# FOODMAP
 
-Crea una web-app que a través de un input pueda filtrar los restaurantes
-que se encuentran cerca de ti *(Tú decides la estructura que tendrán tus datos,
-puedes crear una lista de restaurantes en un arreglo, en un objeto, consumir una API, etc. Lo importante es que el contenido debe ser dinámico y no estático y el diseño es totalmente libre)*.
+En estos días, donde casi todo tiende a ser digitalizado, nos vemos en la necesidad de saber los lugares o puntos de referencia ( en caso de que necesitemos dar información sobre nuestra ubicación), de la misma forma cuando planeamos  una salida con nuestr@s amig@s, o alguna reunión, y si esto es plan de ultima hora, con más razón necesitamos saber los lugares cercanos al que podemos ir o los restaurantes más cercanos a nuestra ubicación. 
 
-#### Flujo de la aplicación.
+Por ello, esta web-app le muestra los restaurantes más cercanos donde usted se encuentre, así mismo tendrá la opción hacer una búsqueda de algún restaurante de entre la lista. En cada una de las opciones de restaurante que listamos, también le detallamos información necesaria como dirección exacta, una breve descripción, teléfono de contacto, referencia, tipo de comida (peruana, italiana, entre otros).
 
-Vista splash con duración de 2 segundos que redirecciona a tu vista
-principal.
-![Splash](https://github.com/AnaSalazar/curricula-js/blob/04-social-network/04-social-network/02-jquery/08-code-challenges/foodmap/splash.jpg?raw=true)
+En resumen, usted podrá:
 
-En la vista principal se muestran todos los restaurantes "cerca de ti" junto
-con el input para filtrar tu elección *(Los criterios de filtrado son decisión
-tuya, puede ser por tipo de comida, costos, orden alfabético, etc.)*.
-![vista principal](https://github.com/AnaSalazar/curricula-js/blob/04-social-network/04-social-network/02-jquery/08-code-challenges/foodmap/2.jpg?raw=true)
+  - Filtrar por zona.
+  - Buscar de restaurante por nombre.
+  - Ver detalles sobre un restaurante específico.
 
-Ya que se hizo la elección del filtro deben mostrarse únicamente aquellos
-restaurantes que cumplan con la condición.
-![vista filtrado](https://github.com/AnaSalazar/curricula-js/blob/04-social-network/04-social-network/02-jquery/08-code-challenges/foodmap/3.jpg?raw=true)
+## Herramientas Utilizadas
 
-Al seleccionar alguno de los restaurantes, deberá mostrarse la información de
-este a través de un modal.
-![modal imagen](https://github.com/AnaSalazar/curricula-js/blob/04-social-network/04-social-network/02-jquery/08-code-challenges/foodmap/5.jpg?raw=true)
+> Balsamiq, esto para el diseño en baja fidelidad.
+> HTML, para la estructura de la web-app
+> CSS, para darle estilos a la web-app
+> Vanilla JavaScript, para darle funcionalildad al proyecto.
 
-Una vez cerrado el modal debe volver a la vista principal.
-![ultima vista](https://github.com/AnaSalazar/curricula-js/blob/04-social-network/04-social-network/02-jquery/08-code-challenges/foodmap/6.jpg?raw=true)
+Decidí no usar frameworks porque considero que debo conocer bien HTML, CSS y JavaScript, me encuentro en proceso de aprendizaje continuo.
+
+## Prototipo de baja fidelidad en Balsamiq
+
+### Mobil
+
+![Mobil](image/prototipo-mobil.png)
+
+### Web
+
+![Web-partA](pictures/prototipo-web1.png)<br>
+![Web-partB](pictures/prototipo-web2.png)
+
+## FoodMap
+
+![Mobil](image/mobil.gif) <br>
+![Web](image/web.gif)
