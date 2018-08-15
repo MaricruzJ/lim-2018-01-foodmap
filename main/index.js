@@ -16,7 +16,7 @@ const otherFood = document.getElementById('other-food');
 const listFiltered = document.getElementById('list-filtered');
 
 
-let zone;
+let objectFoodMap = {};
 
 getJson('../data/zone.json', (jsonZone) => {
 
@@ -33,28 +33,23 @@ getJson('../data/zone.json', (jsonZone) => {
         }
     }
 
-    zone = selectCity.value;
-    console.log(zone);
+    objectFoodMap.zone = selectCity.value;
+
     selectCity.addEventListener('change', () => {
-        zone = selectCity.value;
-        console.log(zone);
-    });
 
-    getJson('../data/data.json', (jsonRestaurant) => {
-        for (const keyRestaurant in jsonRestaurant) {
-            if (jsonRestaurant.hasOwnProperty(keyRestaurant)) {
-                const objectRestaurant = jsonRestaurant[keyRestaurant];
-                console.log(objectRestaurant.name);
-
-                if (zone)
-
-
+        objectFoodMap.zone = selectCity.value;
+        getJson('../data/data.json', (jsonRestaurant) => {
+            for (const keyRestaurant in jsonRestaurant) {
+                console.log(keyRestaurant);
+                console.log(jsonRestaurant);
+                
+                
             }
-        }
-    })
+            
+            console.log(objectFoodMap);
+        })
+    });
 })
-
-
 
 
 btnSearchRestaurant.addEventListener('click', () => {
