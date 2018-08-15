@@ -35,10 +35,8 @@ getJson('../data/zone.json', (jsonZone) => {
     }
 
     zone = selectCity.value;
-    console.log(zone);
     selectCity.addEventListener('change', () => {        
         zone = selectCity.value;
-        console.log(zone);
     });
 
     btnSearchRestaurant.addEventListener('click', () => {
