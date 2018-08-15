@@ -16,8 +16,6 @@ const otherFood = document.getElementById('other-food');
 const listFiltered = document.getElementById('list-filtered');
 
 
-let objectFoodMap = {};
-
 getJson('../data/zone.json', (jsonZone) => {
 
     for (const keyZone in jsonZone) {
@@ -33,31 +31,29 @@ getJson('../data/zone.json', (jsonZone) => {
         }
     }
 
-    objectFoodMap.zone = selectCity.value;
-
     selectCity.addEventListener('change', () => {
 
-        objectFoodMap.zone = selectCity.value;
-        getJson('../data/data.json', (jsonRestaurant) => {
-            for (const keyRestaurant in jsonRestaurant) {
-                console.log(keyRestaurant);
+
+        btnSearchRestaurant.addEventListener('click', () => {
+            console.log('click en botón de busqueda de restaurant');
+            contentSplash.classList.add('hiden');
+            contentStart.classList.add('hiden');
+            contentMain.classList.remove('hiden');
+
+            getJson('../data/data.json', (jsonRestaurant) => {
                 console.log(jsonRestaurant);
-                         
-            }
-            
-            console.log(objectFoodMap);
-        })
+
+                for (const keyRestaurant in jsonRestaurant) {
+                    if (jsonRestaurant.hasOwnProperty(keyRestaurant)) {
+                        const element = jsonRestaurant[keyRestaurant];
+
+                        console.log(element);
+                    }
+                }
+            })
+        });
     });
 })
-
-
-btnSearchRestaurant.addEventListener('click', () => {
-    console.log('click en botón de busqueda de restaurant');
-    contentSplash.classList.add('hiden');
-    contentStart.classList.add('hiden');
-    contentMain.classList.remove('hiden');
-});
-
 
 filterNameRestaurant.addEventListener('keyup', () => {
     console.log(filterNameRestaurant.value);
