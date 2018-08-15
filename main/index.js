@@ -36,7 +36,7 @@ filterNameRestaurant.addEventListener('keyup', () => {
     console.log(filterNameRestaurant.value);
 })
 
-fetch('../data/zone.json')
+/* fetch('../data/zone.json')
     .then((response) => {
         return response.json();
     })
@@ -51,7 +51,7 @@ fetch('../data/zone.json')
                 console.log(element);
             }
         }
-    });
+    }); */
 
 fetch('../data/data.json')
     .then((response) => {
@@ -70,15 +70,18 @@ fetch('../data/data.json')
         }
     });
 
-getUserForId = (uid, callback) => {
-    const userRef = firebase.database().ref('users/' + uid);
-    userRef.once('value', (snap) => {
-        callback(snap.val());
+getJson('../data/data.json', (zone) => {
+console.log(zone);
+})
+
+getJson = (url, callback) => {
+
+    fetch(url)
+    .then((response) => {
+        return response.json();
     })
+    .then((myJson) => {
+        console.log(myJson);
+        callback(myJson);
+    });
 }
-
-getUserForId(user.uid, (userDatabase) => {
-
-    userNameProfile.innerHTML = userDatabase.fullName;
-
-});
