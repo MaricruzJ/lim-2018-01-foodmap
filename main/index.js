@@ -16,7 +16,7 @@ const otherFood = document.getElementById('other-food');
 const listFiltered = document.getElementById('list-filtered');
 
 
-let zone = {};
+let zone;
 
 getJson('../data/zone.json', (jsonZone) => {
 
@@ -34,11 +34,11 @@ getJson('../data/zone.json', (jsonZone) => {
         }
     }
 
-    zone.key = selectCity.value;
-    console.log(zone.key);
-    selectCity.addEventListener('change', () => {
-        console.log(selectCity.value);
-        zone.key = selectCity.value;
+    zone = selectCity.value;
+    console.log(zone);
+    selectCity.addEventListener('change', () => {        
+        zone = selectCity.value;
+        console.log(zone);
     });
 
     btnSearchRestaurant.addEventListener('click', () => {
