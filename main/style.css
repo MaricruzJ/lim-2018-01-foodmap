@@ -111,9 +111,6 @@ select{
     border-width: 1px
 }
 
-.list-filtered{
-   display: flex;
-}
 
 .filtered{
     margin: 10px;

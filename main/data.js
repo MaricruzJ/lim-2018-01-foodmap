@@ -25,14 +25,15 @@ showRestaurantInZone = (objectRestaurant) => {
 
     let inputRestaurant = document.createElement('button');
     inputRestaurant.setAttribute('class', 'restaurante-filtered');
+    inputRestaurant.style.backgroundImage = "url('" + objectRestaurant.photo + "')";
+    inputRestaurant.style.backgroundSize = "200px";
 
     let nameRestaurant = document.createElement('p');
     let textName = document.createTextNode(objectRestaurant.name);
 
-    textName.appendChild(nameRestaurant);
-    nameRestaurant.appendChild(cardRestaurant);
-    inputRestaurant.appendChild(cardRestaurant);
+    cardRestaurant.appendChild(inputRestaurant);
+    nameRestaurant.appendChild(textName);
+    cardRestaurant.appendChild(nameRestaurant);
 
-    cardRestaurant.appendChild(listFiltered);
+    listFiltered.appendChild(cardRestaurant);
 }
-
