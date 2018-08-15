@@ -42,8 +42,7 @@ getJson('../data/zone.json', (jsonZone) => {
             for (const keyRestaurant in jsonRestaurant) {
                 console.log(keyRestaurant);
                 console.log(jsonRestaurant);
-                
-                
+                         
             }
             
             console.log(objectFoodMap);
