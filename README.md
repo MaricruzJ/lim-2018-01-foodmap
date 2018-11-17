@@ -35,12 +35,8 @@ Inicialmente este proyecto lo realicé con css puro, pero a modo de práctica de
 
 ## FoodMap resultado versión mobile / web
 
-![Mobil](image/mobil.gif) <br>
+![Mobil](image/mobile.gif) <br>
 ![Web](image/web.gif)
 
 ## Figma
-
-<iframe style="border: none;" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FIml8CxUjH0ccS5KW3QDUPCqb%2FPrueba%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
-
-https://www.figma.com/file/Iml8CxUjH0ccS5KW3QDUPCqb/Prueba?node-id=0%3A1
 
