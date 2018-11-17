@@ -33,10 +33,17 @@ Inicialmente este proyecto lo realicé con css puro, pero a modo de práctica de
 ![Web-partB](image/web-2.png)<br>
 ![Web-partC](image/web-3.png)
 
-## FoodMap resultado versión mobile / web
+## Resultado versión mobile
 
 ![Mobil](image/mobile.gif) <br>
-![Web](image/web.gif)
 
-## Figma
+## Resultado versión web
+
+Gif de las principales vistas en web. <br>
+
+![Web](image/web.gif) <br>
+
+## DEMO con Figma <br>
+
+https://www.figma.com/proto/d28rB1kUOPK6VmnWlHIfjaMA/FoodMap?node-id=7%3A3&scaling=scale-down
 
