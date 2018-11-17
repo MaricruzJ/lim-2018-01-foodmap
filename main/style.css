@@ -1,188 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Spicy+Rice');
+
 html{
     height: 100%;
     width: 100%;
 }
 
 body{
-    background-color: #27CEA1;
-    text-align: center; 
+    background-color: #F8F8F8;
     margin: 0px;
     height: 100%;
     width: 100%;
     font-family: Georgia;
 }
 
-#content-splash{
+.container{
+    background-color:#F8F8F8;
+}
+
+.content-main{
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.content-title{
+    position: relative;
+    height: 15vh;
+    text-align: center;
+}
+
+.title, .splash-title{
+    font-family: 'Spicy Rice', cursive;
+    font-size: 60px;
+    color: #EC6C76;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    text-align: center;
+}
+
+.splash-title{
+    text-shadow: 5px 5px 50px #F8F8F8;
 }
 
 .hiden{
     display: none;
 }
 
-#content-start{
-    height: 100%;
-    width: 100%;
-    position: absolute;
+.item-filtered{
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
 }
 
-
-header{
-    height: 30%;
-    background-color: #27CEA1;
-}
-
-.start-main{
-    height: 40%;
-    background-color:#DEB887;
-}
-
-.content-start-main{
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%,-50%);
-}
-
-p{
-    margin: 0px;
-    padding: 10px;
-}
-
-footer{
-    height: 30%;
-    background-color: #27CEA1;
-}
-
-.logo{
-    padding: 25px;
-}
-
-#content-main{
-    height: 100%;
-    width: 100%;
-    position: absolute;
-}
-
-.main{
-    height: auto;
-    display: flex;
-    width: 100%;
-}
-
-.content-filter{
-    width: 600px;
-    background-color: aliceblue;
+.photo-restaurant{
+    height: 180px;
+    width: 200px;
+    background-position:  50% 50%; 
+    background-repeat: no-repeat;
+    object-fit: cover;
 }
 
 .content-filtered{
     position: relative;
-    width: 800px;
-    background-color:#DEB887;
-    padding: 10px;
+    margin-top: 40vh;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
 }
 
-input[type="text"]{
-    border-radius: 5px;
-    height: 25px;
-    width: 350px;
-    border-width: 1px
-}
-
-input[type="radio"]{
-    height: 25px;
-    width: 30px;  
-}
-
-#btn-search-restaurant{
-    height: 25px;
-    width: 100px;  
-    border-radius: 5px;
-}
-
-select{
-    border-radius: 5px;
-    height: 25px;
-    width: 250px;
-    border-width: 1px
-}
-
-
-.filtered{
-    margin: 10px;
-    height: 200px;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: white;
-}
-
-.restaurante-filtered{
-    height: 180px;
-    width: 200px;
-}
-
-ul li{
-    list-style-type: none;
-    text-align: left;
-    padding: 10px;
-}
-
-@media only screen and (max-width: 360px) {
-    input[type="text"] {
-        border-radius: 5px;
-        height: 25px;
-        width: 250px;
-        border-width: 1px;
-    }
-
-    #btn-search-restaurant {
-        margin: 30px;
-        height: 25px;
-        width: 100px;
-        border-radius: 5px;
-    }
-
-    .main {
-        height: 70%;
-        width: 100%;
-        display: block;
-        position: absolute;
-       
-    }
-
-    header{
-        width: 100%;
-    }
-
-    .content-filter {
-        width: 100%;
-        background-color: aliceblue;
-    }
-
-    .content-filtered {
-        padding: 0px;
-        width: 100%;
-        background-color: #DEB887;
-    }
-
-    .list-filtered{
-        display: block;
-     }
-
-     .filtered {
-        margin: 0px;
-        height: auto;
-        width: 100%;
-    }
-
-     ul li{
-        list-style-type: none;
-        text-align: left;
-        padding: 10px;
-        margin: 0px;
-    }
+.modal-header{
+    background-color: #EC6C76;
 }

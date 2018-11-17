@@ -6,31 +6,41 @@ Por ello, esta web-app le muestra los restaurantes más cercanos donde usted se 
 
 En resumen, usted podrá:
 
-  - Filtrar por zona.<br>
+  - Seleccionar una zona en particular.<br>
   - Buscar de restaurante por nombre.<br>
-  - Ver detalles sobre un restaurante específico.<br>
+  - Ver información sobre un restaurante específico.<br>
 
 ## Herramientas Utilizadas
 
 > Balsamiq, esto para el diseño en baja fidelidad.<br>
 > HTML, para la estructura de la web-app<br>
-> CSS, para darle estilos a la web-app<br>
+> Boostrap, para darle estilos a la web-app<br>
 > Vanilla JavaScript, para darle funcionalildad al proyecto.<br>
 
-Decidí no usar frameworks porque considero que debo conocer bien HTML, CSS y JavaScript, me encuentro en proceso de aprendizaje continuo.<br>
+Inicialmente este proyecto lo realicé con css puro, pero a modo de práctica decidí emplear boootstrap, y para una mejor demo también realicé una presentación en figma. <br>
 
 ## Prototipo de baja fidelidad en Balsamiq
 
 ### Mobil
 
-![Mobil](image/prototipo-movil.png)
+![Mobil-1](image/mobile-1.png)
+![Mobil-2](image/mobile-2.png)
+![Mobil-3](image/mobile-3.png)
 
 ### Web
 
-![Web-partA](image/prototipo-web1.png)<br>
-![Web-partB](image/prototipo-web2.png)
+![Web-partA](image/web-1.png)<br>
+![Web-partB](image/web-2.png)<br>
+![Web-partC](image/web-3.png)
 
-## FoodMap
+## FoodMap resultado versión mobile / web
 
 ![Mobil](image/mobil.gif) <br>
 ![Web](image/web.gif)
+
+## Figma
+
+<iframe style="border: none;" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FIml8CxUjH0ccS5KW3QDUPCqb%2FPrueba%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
+
+https://www.figma.com/file/Iml8CxUjH0ccS5KW3QDUPCqb/Prueba?node-id=0%3A1
+

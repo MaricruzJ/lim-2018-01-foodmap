@@ -5,65 +5,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="main/style.css">
-    <title>Index - FoodMap</title>
+    <title>FoodMap</title>
 </head>
 
 <body>
     <!-- SPLASH -->
-    <div id="content-splash" class="content-splash">
-        <img src="image/logo.png">
+    <div id="content-splash" class="container-fluid splash-title">
+        <label>FoodMap</label>
+        <iframe style="border: none;" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FIml8CxUjH0ccS5KW3QDUPCqb%2FPrueba%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
     </div>
-    <!-- VISTA DE OPCIONES SOBRE UBICACIÓN ACTUAL -->
-    <section id="content-start" class="hiden">
-        <header>
-            <img class="logo" src="image/logo.png">
-        </header>
-        <main class="start-main">
-            <div class="content-start-main">
-                <p> ¿Dónde te encuentras ahora?</p>
-                <select id="select-city">
-                </select>
-                <input type="button" id="btn-search-restaurant" value="BUSCAR">
-            </div>
-        </main>
-        <footer>
 
-        </footer>
-    </section>
     <!-- VISTA PRINCIPAL -->
-    <section id="content-main" class="hiden">
-        <header>
-            <img class="logo" src="image/logo.png">
-        </header>
-        <main class="main">
-            <div class="content-filter">
-                <p>Filtrar por:</p>
-                <input type="text" id="filter-name-restaurant" placeholder="Ingrese restaurante...">
-                <p>Categoría:</p>
-                <ul>
-                    <li>
-                        <input type="radio" id="italian-food" name="food" value="Comida Italiana">
-                        <label for="italian-food">Comida Italiana</label>
-                    </li>
-                    <li>
-                        <input type="radio" id="japanesse-food" name="food" value="Comida Japonesa">
-                        <label for="japanesse-food">Comida Japonesa</label>
-                    </li>
-                    <li>
-                        <input type="radio" id="peruvian-food" name="food" value="Comida Peruana">
-                        <label for="peruvian-food">Comida Peruana</label>
-                    </li>
-                </ul>
-            </div>
-            <div class="content-filtered">
-                <p>Restaurantes encontrados:</p>
-                <div id="list-filtered" class="list-filtered">
-
+    <div class="container">
+        <div id="content-main" class="hiden col-md-12">
+            <div class="navbar navbar-default navbar-fixed-top col-md-12">
+                <div class="container">
+                    <div class="content-title col-md-12">
+                        <label class="title col-md-12">FoodMap</label>
+                    </div>
+                    <div class="form-group col-md-9">
+                        <label>Filtrar por:</label>
+                        <input type="text" id="text-search" class="form-control col-md-12" placeholder="Ingrese nombre del restaurante...">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label> ¿Dónde te encuentras?</label>
+                        <select id="select-city" class="form-control col-md-12">
+                            <option value="-1">Seleccione lugar</option>
+                        </select>
+                    </div>
+                    <div class="form col-md-12">
+                        <ul class="nav nav-tabs nav-justified">
+                            <li role="presentation" class="active" id="all-food"><a href="#">Mostrar todos</a></li>
+                            <li role="presentation" id="japanesse-food"><a href="#">Comida Japonesa</a></li>
+                            <li role="presentation" id="peruvian-food"><a href="#">Comida Peruana</a></li>
+                            <li role="presentation" id="italian-food"><a href="#">Comida Italiana</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </main>
-    </section>
+
+            <div class="content-filtered col-md-12">
+                <div id="list-filtered" class="list-filtered col-md-12"></div>
+            </div>
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 id="modal-title" class="modal-title"></h4>
+                        </div>
+                        <div class="modal-body">
+                            <p id="modal-description"></p>
+                            <p id="modal-location"></p>
+                            <p id="modal-reference"></p>
+                            <p id="modal-phone"></p>
+                            <p id="modal-state"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
     <script src="main/data.js"></script>
     <script src="main/index.js"></script>
 </body>

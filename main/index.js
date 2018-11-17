@@ -1,161 +1,144 @@
 const contentSplash = document.getElementById('content-splash');
-const contentStart = document.getElementById('content-start');
 const contentMain = document.getElementById('content-main');
 
 const selectCity = document.getElementById('select-city');
-const btnSearchRestaurant = document.getElementById('btn-search-restaurant');
-
-const filterNameRestaurant = document.getElementById('filter-name-restaurant');
+const textSearch = document.getElementById('text-search');
 const italianFood = document.getElementById('italian-food');
 const japanesseFood = document.getElementById('japanesse-food');
 const peruvianFood = document.getElementById('peruvian-food');
+const allFood = document.getElementById('all-food');
 
 const listFiltered = document.getElementById('list-filtered');
 
+const modalTitle = document.getElementById('modal-title');
+const modalDescription = document.getElementById('modal-description');
+const modalLocation = document.getElementById('modal-location');
+const modalReference = document.getElementById('modal-reference');
+const modalPhone = document.getElementById('modal-phone');
+const modalState = document.getElementById('modal-state');
+
+let optionFood;
 
 getJson('../data/zone.json', (jsonZone) => {
 
     for (const keyZone in jsonZone) {
-        if (jsonZone.hasOwnProperty(keyZone)) {
-            const objectZone = jsonZone[keyZone];
+        const objectZone = jsonZone[keyZone];
 
-            let optionZone = document.createElement('option');
-            optionZone.setAttribute('value', objectZone.name);
-            let optionZoneText = document.createTextNode(objectZone.name);
+        let optionZone = document.createElement('option');
+        optionZone.setAttribute('value', objectZone.name);
+        let optionZoneText = document.createTextNode(objectZone.name);
 
-            optionZone.appendChild(optionZoneText);
-            selectCity.appendChild(optionZone);
-        }
+        optionZone.appendChild(optionZoneText);
+        selectCity.appendChild(optionZone);
     }
 
-    btnSearchRestaurant.addEventListener('click', () => {
-        contentSplash.classList.add('hiden');
-        contentStart.classList.add('hiden');
-        contentMain.classList.remove('hiden');
+    getJson('../data/data.json', (jsonRestaurant) => {
+        showRestaurant(jsonRestaurant);
 
-        getJson('../data/data.json', (jsonRestaurant) => {
+        textSearch.addEventListener('keyup', () => {
+            listFiltered.innerHTML = '';
+            allFood.className = 'active';
+            italianFood.classList.remove('active');
+            japanesseFood.classList.remove('active');
+            peruvianFood.classList.remove('active');
+            filterRestaurant(jsonRestaurant, textSearch.value.toLowerCase());
+        });
 
-            for (const keyRestaurant in jsonRestaurant) {
+        allFood.addEventListener('click', () => {
+            selectCity.value = '-1';
+            allFood.className = 'active';
+            italianFood.classList.remove('active');
+            japanesseFood.classList.remove('active');
+            peruvianFood.classList.remove('active');
+            textSearch.value = '';
+            listFiltered.innerHTML = '';
+            showRestaurant(jsonRestaurant);
+        })
 
-                const restaurant = jsonRestaurant[keyRestaurant];
-                 showRestaurantInZone(restaurant);
+        italianFood.addEventListener('click', () => {
+            selectCity.value = '-1';
+            italianFood.className = 'active';
+            allFood.classList.remove('active');
+            japanesseFood.classList.remove('active');
+            peruvianFood.classList.remove('active');
+            textSearch.value = '';
+            listFiltered.innerHTML = '';
+            optionFood = 'Italiana';
+            showForType(jsonRestaurant, optionFood.toLowerCase());
+        })
 
-                filterNameRestaurant.addEventListener('keyup', () => {
+        japanesseFood.addEventListener('click', () => {
+            selectCity.value = '-1';
+            japanesseFood.className = 'active';
+            allFood.classList.remove('active');
+            peruvianFood.classList.remove('active');
+            italianFood.classList.remove('active');
+            textSearch.value = '';
+            listFiltered.innerHTML = '';
+            optionFood = 'Japonesa';
+            showForType(jsonRestaurant, optionFood.toLowerCase());
+        })
 
-                    let filterResult = filterRestaurant(jsonRestaurant, filterNameRestaurant.value);
-                    console.log(filterResult);
-                });
+        peruvianFood.addEventListener('click', () => {
+            selectCity.value = '-1';
+            peruvianFood.className = 'active';
+            allFood.classList.remove('active');
+            italianFood.classList.remove('active');
+            japanesseFood.classList.remove('active');
+            textSearch.value = '';
+            listFiltered.innerHTML = '';
+            optionFood = 'Peruana';
+            showForType(jsonRestaurant, optionFood.toLowerCase());
+        })
 
-                italianFood.addEventListener('click', () => {
-                    listFiltered.innerHTML = '';
-                    showRestaurantItalian(restaurant);
-                })
-
-                japanesseFood.addEventListener('click', () => {
-                    listFiltered.innerHTML = '';
-                    showRestaurantJapanesse(restaurant);
-                })
-
-                peruvianFood.addEventListener('click', () => {
-                    listFiltered.innerHTML = '';
-                    showRestaurantPeruvian(restaurant);
-                })
+        selectCity.addEventListener('change', () => {
+            if (selectCity.value !== '-1') {
+                listFiltered.innerHTML = '';
+                showForZone(jsonRestaurant, selectCity.value.toLowerCase());
             }
         })
-    });
+    })
 })
 
-selectCity.addEventListener('change', () => {
-    console.log(selectCity.value);
-});
+showRestaurant = (jsonRestaurant) => {
 
+    if (jsonRestaurant.length === 0) {
+        listFiltered.innerHTML = 'No hay resultados';
+    } else {
+        for (const key in jsonRestaurant) {
 
-showRestaurantInZone = (objectRestaurant) => {
+            const objectRestaurant = jsonRestaurant[key];
 
-    let cardRestaurant = document.createElement('div');
-    cardRestaurant.setAttribute('class', 'filtered');
+            let cardRestaurant = document.createElement('div');
+            cardRestaurant.setAttribute('class', 'item-filtered col-sm-3');
+            cardRestaurant.setAttribute('data-toggle', 'modal');
+            cardRestaurant.setAttribute('data-target', '#myModal');
 
-    let inputRestaurant = document.createElement('button');
-    inputRestaurant.setAttribute('class', 'restaurante-filtered');
-    inputRestaurant.style.backgroundImage = "url('" + objectRestaurant.photo + "')";
-    inputRestaurant.style.backgroundSize = "200px";
+            let inputRestaurant = document.createElement('button');
+            inputRestaurant.setAttribute('class', 'photo-restaurant');
+            inputRestaurant.classList.add('img-responsive');
+            inputRestaurant.style.backgroundImage = "url('" + objectRestaurant.photo + "')";
 
-    let nameRestaurant = document.createElement('p');
-    let textName = document.createTextNode(objectRestaurant.name);
+            let nameRestaurant = document.createElement('p');
+            nameRestaurant.style.fontWeight = 'bold';
+            let textName = document.createTextNode(objectRestaurant.name);
 
-    cardRestaurant.appendChild(inputRestaurant);
-    nameRestaurant.appendChild(textName);
-    cardRestaurant.appendChild(nameRestaurant);
+            nameRestaurant.appendChild(textName);
+            cardRestaurant.appendChild(inputRestaurant);
+            cardRestaurant.appendChild(nameRestaurant);
 
-    listFiltered.appendChild(cardRestaurant);
-}
+            listFiltered.appendChild(cardRestaurant);
 
-
-showRestaurantItalian = (objectRestaurant) => {
-
-    if (objectRestaurant.foodType === 'Comida Italiana') {
-        let cardRestaurant = document.createElement('div');
-        cardRestaurant.setAttribute('class', 'filtered');
-
-        let inputRestaurant = document.createElement('button');
-        inputRestaurant.setAttribute('class', 'restaurante-filtered');
-        inputRestaurant.style.backgroundImage = "url('" + objectRestaurant.photo + "')";
-        inputRestaurant.style.backgroundSize = "200px";
-
-        let nameRestaurant = document.createElement('p');
-        let textName = document.createTextNode(objectRestaurant.name);
-
-        cardRestaurant.appendChild(inputRestaurant);
-        nameRestaurant.appendChild(textName);
-        cardRestaurant.appendChild(nameRestaurant);
-
-        listFiltered.appendChild(cardRestaurant);
+            cardRestaurant.addEventListener('click', () => {
+                modalTitle.innerHTML = objectRestaurant.name;
+                modalTitle.style.fontWeight = 'bold';
+                modalDescription.innerHTML = objectRestaurant.description;
+                modalLocation.innerHTML = 'Ubicación: ' + objectRestaurant.location;
+                modalReference.innerHTML = 'Referencia: ' + objectRestaurant.reference;
+                modalPhone.innerHTML = 'Teléfono: ' + objectRestaurant.phone;
+                modalState.innerHTML = 'Estado: ' + objectRestaurant.state;
+            })
+        }
     }
-
 }
 
-showRestaurantJapanesse = (objectRestaurant) => {
-  
-    if (objectRestaurant.foodType === 'Comida Japonesa') {
-        let cardRestaurant = document.createElement('div');
-        cardRestaurant.setAttribute('class', 'filtered');
-
-        let inputRestaurant = document.createElement('button');
-        inputRestaurant.setAttribute('class', 'restaurante-filtered');
-        inputRestaurant.style.backgroundImage = "url('" + objectRestaurant.photo + "')";
-        inputRestaurant.style.backgroundSize = "200px";
-
-        let nameRestaurant = document.createElement('p');
-        let textName = document.createTextNode(objectRestaurant.name);
-
-        cardRestaurant.appendChild(inputRestaurant);
-        nameRestaurant.appendChild(textName);
-        cardRestaurant.appendChild(nameRestaurant);
-
-        listFiltered.appendChild(cardRestaurant);
-    }
-
-}
-
-showRestaurantPeruvian = (objectRestaurant) => {
-   
-    if (objectRestaurant.foodType === 'Comida Peruana') {
-        let cardRestaurant = document.createElement('div');
-        cardRestaurant.setAttribute('class', 'filtered');
-
-        let inputRestaurant = document.createElement('button');
-        inputRestaurant.setAttribute('class', 'restaurante-filtered');
-        inputRestaurant.style.backgroundImage = "url('" + objectRestaurant.photo + "')";
-        inputRestaurant.style.backgroundSize = "200px";
-
-        let nameRestaurant = document.createElement('p');
-        let textName = document.createTextNode(objectRestaurant.name);
-
-        cardRestaurant.appendChild(inputRestaurant);
-        nameRestaurant.appendChild(textName);
-        cardRestaurant.appendChild(nameRestaurant);
-
-        listFiltered.appendChild(cardRestaurant);
-    }
-
-}
