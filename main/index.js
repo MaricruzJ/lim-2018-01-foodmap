@@ -13,6 +13,7 @@ const listFiltered = document.getElementById('list-filtered');
 const modalTitle = document.getElementById('modal-title');
 const modalDescription = document.getElementById('modal-description');
 const modalLocation = document.getElementById('modal-location');
+const modalDirection = document.getElementById('modal-direction');
 const modalReference = document.getElementById('modal-reference');
 const modalPhone = document.getElementById('modal-phone');
 const modalState = document.getElementById('modal-state');
@@ -134,6 +135,7 @@ showRestaurant = (jsonRestaurant) => {
                 modalTitle.style.fontWeight = 'bold';
                 modalDescription.innerHTML = objectRestaurant.description;
                 modalLocation.innerHTML = 'Ubicación: ' + objectRestaurant.location;
+                modalDirection.innerHTML = 'Dirección: ' + objectRestaurant.direction;
                 modalReference.innerHTML = 'Referencia: ' + objectRestaurant.reference;
                 modalPhone.innerHTML = 'Teléfono: ' + objectRestaurant.phone;
                 modalState.innerHTML = 'Estado: ' + objectRestaurant.state;
