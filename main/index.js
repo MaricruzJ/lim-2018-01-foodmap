@@ -20,7 +20,7 @@ const modalState = document.getElementById('modal-state');
 
 let optionFood;
 
-getJson('../data/zone.json', (jsonZone) => {
+getJson('../data/district.json', (jsonZone) => {
 
     for (const keyZone in jsonZone) {
         const objectZone = jsonZone[keyZone];
