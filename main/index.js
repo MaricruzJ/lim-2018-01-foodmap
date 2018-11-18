@@ -20,7 +20,7 @@ const modalState = document.getElementById('modal-state');
 
 let optionFood;
 
-getJson('../data/district.json', (jsonZone) => {
+getJson('data/district.json', (jsonZone) => {
 
     for (const keyZone in jsonZone) {
         const objectZone = jsonZone[keyZone];
@@ -33,7 +33,7 @@ getJson('../data/district.json', (jsonZone) => {
         selectCity.appendChild(optionZone);
     }
 
-    getJson('../data/data.json', (jsonRestaurant) => {
+    getJson('data/data.json', (jsonRestaurant) => {
         showRestaurant(jsonRestaurant);
 
         textSearch.addEventListener('keyup', () => {
@@ -111,7 +111,7 @@ showRestaurant = (jsonRestaurant) => {
             const objectRestaurant = jsonRestaurant[key];
 
             let cardRestaurant = document.createElement('div');
-            cardRestaurant.setAttribute('class', 'item-filtered col-sm-3');
+            cardRestaurant.setAttribute('class', 'item-filtered col-xs-6 col-sm-4 col-md-3');
             cardRestaurant.setAttribute('data-toggle', 'modal');
             cardRestaurant.setAttribute('data-target', '#myModal');
 

@@ -47,9 +47,10 @@ body{
 }
 
 .item-filtered{
-    padding: 5px;
+    text-align: -webkit-center;  
     border-radius: 5px;
     display: inline-block;
+    font-size: 13px;
 }
 
 .photo-restaurant{
@@ -58,16 +59,31 @@ body{
     background-position:  50% 50%; 
     background-repeat: no-repeat;
     object-fit: cover;
+    text-align: center;
 }
 
 .content-filtered{
     position: relative;
     margin-top: 40vh;
     width: 100%;
-    text-align: center;
     box-sizing: border-box;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.list-filtered{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
 }
 
 .modal-header{
     background-color: #EC6C76;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
 }

@@ -10,6 +10,8 @@ En resumen, usted podrá:
   - Buscar de restaurante por nombre.<br>
   - Ver información sobre un restaurante específico.<br>
 
+*** Los datos que contienen son referenciales.
+
 ## Herramientas Utilizadas
 
 > Balsamiq, esto para el diseño en baja fidelidad.<br>
