@@ -104,7 +104,7 @@ getJson('../data/zone.json', (jsonZone) => {
 showRestaurant = (jsonRestaurant) => {
 
     if (jsonRestaurant.length === 0) {
-        listFiltered.innerHTML = 'No hay resultados';
+        listFiltered.innerHTML = '- No hay resultados -';
     } else {
         for (const key in jsonRestaurant) {
 
